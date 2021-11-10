@@ -6,7 +6,7 @@
     <color name="secondary_text">#888888</color>
     <color name="white">#FFFFFF</color>
     <color name="input_background">#FFFFFF</color>
-    <color name="icon_background">#373737</color>
+    <color name="icon_background">#6C6C6C</color>
     <color name="error">#D50000</color>
     <color name="received_message_background">#000000</color>
 

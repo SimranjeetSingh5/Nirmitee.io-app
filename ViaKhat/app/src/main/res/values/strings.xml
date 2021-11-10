@@ -10,4 +10,14 @@
     <string name="todo">TODO</string>
     <string name="hi_there">Hi There!!!</string>
     <string name="welcome">Welcome</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="password">Password</string>
+    <string name="choose">Choose</string>
+    <string name="select_date_of_birth">Select Date of Birth</string>
+    <string name="required">*Required</string>
+    <string name="email">Email</string>
+    <string name="first_name">First Name</string>
+    <string name="add_image">Add Image</string>
+    <string name="create_new_account">Create New Account</string>
+    <string name="already_on_viakhat_log_in"><u>Already on ViaKhat? Log In.</u></string>
 </resources>
