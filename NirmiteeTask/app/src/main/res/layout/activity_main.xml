@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/topNavigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:layout_width="311dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:contentDescription="@string/current_location"
+                android:src="@drawable/ic_location" />
+
+            <TextView
+                android:id="@+id/currentLocationTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:fontFamily="@font/acme"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/current_location"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/_15ssp" />
+
+            <TextView
+                android:id="@+id/fullLocationTV"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:fontFamily="@font/acme"
+                android:maxLines="1"
+                android:text="Sansad Marg, Gokul Nagar, Janpath, Connaught Place, New Delhi, Delhi 110001"
+                android:textColor="@color/secondary_text"
+                android:textSize="@dimen/_8ssp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/offersFL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:src="@drawable/ic_offers"
+                android:backgroundTint="@color/primary_text"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/offers" />
+            <TextView
+                android:id="@+id/offersTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/acme"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:text="@string/offers"
+                android:padding="@dimen/_8sdp"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/_12ssp" />
+
+
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/secondary_text"
+        app:layout_constraintTop_toBottomOf="@id/topNavigationBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/secondary_text"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <FrameLayout
+        android:id="@+id/flFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topNavigationBar" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:flow_horizontalBias="0.5"
+        app:menu="@menu/bottom_nav_menu"
+        app:layout_constraintTop_toBottomOf="@id/flFragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
